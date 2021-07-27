@@ -6,6 +6,7 @@ on:
       personalToken:
         description: "Token to use to update the PR"
         required: true
+        default: "foo"
 
 jobs:
   move_to_master:
