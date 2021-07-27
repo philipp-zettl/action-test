@@ -1,0 +1,22 @@
+
+name: Move labeled issues
+on:
+  workflow_dispatch:
+    input:
+      personalToken:
+        description: "Token to use to update the PR"
+        required: true
+
+jobs:
+  move_to_master:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ github.event.inputs.personalToken }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Move PR
+        uses: TheRealWaldo/pull-request@v0.1.2
+        with:
+          base: "master"
+
+
