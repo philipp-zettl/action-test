@@ -1,12 +1,13 @@
 
 name: Move labeled issues
 on:
+
   workflow_dispatch:
-    input:
-      personalToken:
-        description: "Token to use to update the PR"
+    inputs:
+     token:
+        description: 'Token to use'
         required: true
-        default: "foo"
+        default: '0.0.1a'
 
 jobs:
   move_to_master:
