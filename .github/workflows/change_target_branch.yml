@@ -1,8 +1,8 @@
 name: Move labeled issues
 on:
-  pull_request:
-    branches:
-      - 'dependabot_*'
+  push:
+    paths:
+      - 'requirements.txt'
 
 jobs:
   move_to_master:
