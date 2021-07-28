@@ -15,3 +15,4 @@ jobs:
         uses: TheRealWaldo/pull-request@v0.1.2
         with:
           base: "master"
+          title: "${{ github.event.title }} recreated"
