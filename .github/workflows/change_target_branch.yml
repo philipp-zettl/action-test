@@ -1,6 +1,6 @@
 name: Move labeled issues
 on:
-  push:
+  pull_request:
     paths:
       - 'requirements.txt'
 
