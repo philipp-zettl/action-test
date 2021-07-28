@@ -2,7 +2,7 @@ name: Move labeled issues
 on:
   pull_request:
     branches:
-      - dependabot_*
+      - 'dependabot_*'
 
 jobs:
   move_to_master:
