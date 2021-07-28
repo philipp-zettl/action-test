@@ -1,7 +1,8 @@
 name: Move labeled issues
 on:
-  label:
-    dependencies
+  pull_request:
+    branches:
+      - dependabot_*
 
 jobs:
   move_to_master:
