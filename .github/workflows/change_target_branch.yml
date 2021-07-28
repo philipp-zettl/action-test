@@ -1,24 +1,16 @@
-
 name: Move labeled issues
 on:
-
-  workflow_dispatch:
-    inputs:
-     token:
-        description: 'Token to use'
-        required: true
-        default: '0.0.1a'
+  label:
+    dependencies
 
 jobs:
   move_to_master:
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - name: Move PR
         uses: TheRealWaldo/pull-request@v0.1.2
-        env:
-          GITHUB_TOKEN: ${{ github.event.inputs.personalToken }}
         with:
           base: "master"
-
-
